@@ -55,10 +55,6 @@ jobs:
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        cd openwrt
-        git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
-        git -C package/helloworld pull
-        cd ..
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
         
